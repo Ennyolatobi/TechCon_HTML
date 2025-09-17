@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About TechCon 2024</title>
+  <style>
+    :root {
+      --gradient-bg: linear-gradient(135deg, #4a90e2, #9013fe);
+      --gradient-accent: linear-gradient(45deg, #ff6a00, #ee0979);
+      --color-text-light: #f0f0f0;
+      --color-text-dark: #222222;
+      --color-accent: #ff6a00;
+      --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--gradient-bg);
+      background-attachment: fixed;
+      animation: backgroundShift 20s ease-in-out infinite alternate;
+      color: var(--color-text-light);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    @keyframes backgroundShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      position: static;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--color-text-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: rgba(255 255 255 / 0.1);
+      transition: 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: var(--color-accent);
+      color: #fff;
+      outline: none;
+      box-shadow: 0 0 8px var(--color-accent);
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 3rem auto 4rem auto;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem 2.5rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      backdrop-filter: saturate(180%) blur(8px);
+      color: var(--color-text-light);
+    }
+
+    article {
+      margin-bottom: 3rem;
+    }
+
+    article h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    article p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    article img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto 0.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(255, 106, 0, 0.5);
+    }
+
+    /* Speaker bios with images side by side on larger screens */
+    .speakers {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .speaker {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255 255 255 / 0.15);
+    }
+
+    .speaker img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px var(--color-accent);
+    }
+
+    .speaker h3 {
+      margin: 0.3rem 0 0.6rem 0;
+      font-size: 1.3rem;
+      color: #ff6a00;
+    }
+
+    .speaker p {
+      max-width: 320px;
+    }
+
+    @media (min-width: 700px) {
+      .speakers {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .speaker {
+        flex: 1 1 30%;
+        border-top: none;
+        border-left: 1px solid rgba(255 255 255 / 0.15);
+        padding: 0 1rem;
+        text-align: center;
+      }
+
+      .speaker:first-child {
+        border-left: none;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: inset 0 1px 2px #fff3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About TechCon 2024</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="register.html">Register</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article aria-labelledby="history-title">
+      <h2 id="history-title">History of TechCon</h2>
+      <p>
+        Since its inception in 2010, TechCon has grown from a small local meetup into a world-renowned technology conference.
+        Over the years, it has brought together thousands of innovators, developers, and leaders to share ideas, spark collaborations,
+        and inspire the future of technology.
+      </p>
+      <img src="images/history-2010.jpg" alt="TechCon first conference gathering in 2010" />
+      <p>
+        The conference has expanded annually, embracing emerging trends including AI, cloud computing, cybersecurity, and more,
+        making it a pivotal event for the global tech community.
+      </p>
+      <img src="images/history-2018-group.jpg" alt="TechCon attendees networking at 2018 conference" />
+    </article>
+
+    <article aria-labelledby="mission-title">
+      <h2 id="mission-title">Our Mission</h2>
+      <p>
+        TechCon’s mission is to foster innovation and collaboration among technology professionals worldwide.
+        We strive to create an inclusive platform that highlights emerging technologies, encourages learning,
+        and empowers individuals to make meaningful impact through technology.
+      </p>
+      <img src="images/mission-icon.png" alt="Icon representing mission and innovation" />
+    </article>
+
+    <article aria-labelledby="speakers-title">
+      <h2 id="speakers-title">Notable Past Speakers</h2>
+      <div class="speakers">
+
+        <section class="speaker" aria-labelledby="speaker1-name">
+          <img src="images/speakers/jane-doe.jpg" alt="Jane Doe, AI researcher and keynote speaker at TechCon 2022" />
+          <h3 id="speaker1-name">Jane Doe</h3>
+          <p>Jane is a leading AI researcher whose work on neural networks has influenced the way AI is integrated across industries.</p>
+        </section>
+
+        <section class="speaker" aria-labelledby="speaker2-name">
+          <img src="images/speakers/john-smith.jpg" alt="John Smith, cybersecurity expert and speaker at TechCon 2021" />
+          <h3 id="speaker2-name">John Smith</h3>
+          <p>John has pioneered cybersecurity frameworks adopted globally, helping organizations defend against evolving cyber threats.</p>
+        </section>
+
+        <section class="speaker" aria-labelledby="speaker3-name">
+          <img src="images/speakers/anna-kim.jpg" alt="Anna Kim, cloud computing innovator and TechCon 2019 featured speaker" />
+          <h3 id="speaker3-name">Anna Kim</h3>
+          <p>Anna’s contributions in cloud infrastructure have transformed scalable computing, enabling better access for startups and enterprises alike.</p>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2024 TechCon Conference. All rights reserved.
+  </footer>
+</body>
+</html>
