@@ -149,20 +149,24 @@
     </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="intro-title">
-      <h2 id="intro-title" style="color: #ff6a00; margin-bottom: 1rem;">Welcome to TechCon 2024</h2>
-      <p>Join us at TechCon 2024, the ultimate gathering for technology enthusiasts, innovators, and industry leaders.
-        Explore cutting-edge topics, connect with experts, and experience a journey into the future of tech.</p>
-      <video controls>
-            <source src="promo.mp4" type="video/mp4">
-            <track src="captions_en.vtt" kind="captions" srclang="en" label="English">
-            Your browser does not support the video tag.
-      </video>
+ <main>
+  <section aria-labelledby="intro-title" tabindex="0">
+    <h2 id="intro-title" style="color: #ff6a00; margin-bottom: 1rem;">Welcome to TechCon 2024</h2>
+    <p>
+      Join us at TechCon 2024, the ultimate gathering for technology enthusiasts, innovators, and industry leaders. Explore cutting-edge topics, connect with experts, and experience a journey into the future of tech.
+    </p>
 
-      <p id="video-desc" class="visually-hidden">Promotional video showcasing TechCon 2024 highlights, speakers, and schedule preview.</p>
-    </section>
-  </main>
+    <video controls aria-describedby="video-desc" tabindex="0" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(255, 106, 0, 0.5);">
+      <source src="promo.mp4" type="video/mp4" />
+      <track src="promo_captions.vtt" kind="subtitles" srclang="en" label="English" default />
+      Sorry, your browser does not support the video tag.
+    </video>
+
+    <p id="video-desc" class="visually-hidden" style="position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); border:0;">
+      Promotional video showcasing TechCon 2024 highlights, speakers, and schedule preview.
+    </p>
+  </section>
+</main>
 
   <footer>
     </p>&copy; Copyright 2024 TechCon Conference.</p>
